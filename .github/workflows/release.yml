@@ -3,8 +3,9 @@
 name: Release
 
 on:
-  release:
-    types: [published]
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch:  # <--- Type this exact line here!
 
 jobs:
   macos-rel:
